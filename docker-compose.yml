@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  mongo-backup:
+    build: .
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    volumes:
+      - ./backup_result:/backup
